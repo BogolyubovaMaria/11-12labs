@@ -29,4 +29,8 @@ def zd3():
 
     print(f"Итоговая сумма: ",cena)
 
+    with open('Книга1.csv',newline="") as nashcsv: # Итоговое чтение
+        reader = csv.reader(nashcsv)
+        for x in reader:
+            print(x)
 zd3()
