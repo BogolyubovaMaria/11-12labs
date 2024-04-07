@@ -1,3 +1,4 @@
+#9 лабораторная
 import os
 from PIL import Image, ImageFilter
 
@@ -28,7 +29,7 @@ def zd3():
             cena +=  kolvo * centovara
 
     print(f"Итоговая сумма: ",cena)
-
+#обычный вывод
     with open('Книга1.csv',newline="") as nashcsv: # Итоговое чтение
         reader = csv.reader(nashcsv)
         for x in reader:
