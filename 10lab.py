@@ -19,12 +19,10 @@ def zd2lab10():
     # считываем информацию с файла
     with open('docdop.json', 'r', encoding="utf-8") as chit:
         chtenie = json.load(chit)
-        new = {
-            "name": input("Введите новый товар: "),
+        new = {"name": input("Введите новый товар: "),
             "price": int(input("Введите цену товара: ")),
             'available': input("Товар есть в наличии?(True/False): ").lower() == "true",  # .lower() == "true",
-            "weight": int(input("Введите вес товара: "))
-        }
+            "weight": int(input("Введите вес товара: "))}
         chtenie['products'].append(new)
         with open('docdop.json', 'w', encoding="utf-8") as f:
             json.dump(chtenie, f)
@@ -67,4 +65,4 @@ def zd3lab10():
         for rusword in sortirovka:
             engwords = ', '.join(rusanglslov[rusword])
             novirustxt.write(f'{rusword} - {engwords}\n')
-zd3lab10()
+zd2lab10()
